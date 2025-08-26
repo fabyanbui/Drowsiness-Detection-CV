@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical Report.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Technical Report"
+              "title": "README"
             }
           }
         ]
@@ -169,8 +169,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "0d2710702fbfcd32",
+  "active": "000f0d82a01cf6a7",
   "lastOpenFiles": [
+    "Technical Report.md",
+    "README.md",
+    "GitHub_Link.txt",
+    "New Text Document.txt",
     "CT_UAV_Online_Assessment_Test.pdf",
     "CT_UAV_Online_Assessment_Test.pdf.crdownload",
     "Method1/few_shot_model.zip",
@@ -179,9 +183,6 @@
     "Method3/data/VHR10/NWPU VHR-10 dataset/annotations.json",
     "Method3/data/VHR10/NWPU VHR-10 dataset/ground truth/650.txt",
     "Method3/data/VHR10/NWPU VHR-10 dataset/ground truth/649.txt",
-    "Method3/data/VHR10/NWPU VHR-10 dataset/ground truth/648.txt",
-    "Method3/data/VHR10/NWPU VHR-10 dataset/ground truth/647.txt",
-    "Method3/data/VHR10/NWPU VHR-10 dataset/ground truth/646.txt",
     "Method3/data/VHR10/NWPU VHR-10 dataset/positive image set/650.jpg",
     "Method3/data/VHR10/NWPU VHR-10 dataset/positive image set/649.jpg",
     "Method3/data/VHR10/NWPU VHR-10 dataset/positive image set/648.jpg",
@@ -191,7 +192,6 @@
     "Method3/data/VHR10/NWPU VHR-10 dataset/positive image set/644.jpg",
     "Method3/data/VHR10/NWPU VHR-10 dataset/positive image set/643.jpg",
     "Method3/data/VHR10/NWPU VHR-10 dataset/positive image set/642.jpg",
-    "Method3/data/VHR10/NWPU VHR-10 dataset/positive image set/641.jpg",
-    "Technical Report.md"
+    "Method3/data/VHR10/NWPU VHR-10 dataset/positive image set/641.jpg"
   ]
 }
