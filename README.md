@@ -108,3 +108,9 @@ Phương pháp này có tính khả thi cao đối với đề bài kiểm tra A
     
 - **Khả năng thích ứng:** Phương pháp này được xây dựng trên một bộ phát hiện tiên tiến (Grounding DINO), cho phép nó thích ứng tốt với các nhiệm vụ phát hiện đối tượng. Bằng cách học cách kết hợp các đặc trưng tổng quát (từ văn bản) và chi tiết (từ hình ảnh), mô hình có thể phát hiện các đối tượng một cách mạnh mẽ hơn.
 
+## Cách chạy code
+- Chạy file `setup.ipynb` để cài đặt các thư viện cần thiết
+- Chạy lần lượt các file demo ở mỗi thư mục Method
+	- `Method1/demo.ipynb`
+	- `Method2/demo.ipynb`
+	- `Method3/demo.ipynb`
