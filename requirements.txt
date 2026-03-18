@@ -1,6 +1,12 @@
-numpy 
-pandas 
-tensorflow 
-opencv-python 
+numpy
+pandas
+tensorflow
+opencv-python
 matplotlib
 scipy
+scikit-learn
+PyYAML
+Pillow
+fastapi
+uvicorn[standard]
+python-multipart

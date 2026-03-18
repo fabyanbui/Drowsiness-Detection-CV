@@ -1,0 +1,54 @@
+project:
+  name: drowsiness-detection-cv
+  seed: 42
+
+paths:
+  train_dir: Drowsy_dataset/train
+  test_dir: Drowsy_dataset/test
+  artifacts_root: artifacts
+  models_dir: artifacts/models
+  metrics_dir: artifacts/metrics
+  experiments_file: artifacts/experiments/experiments.jsonl
+  monitoring_logs_file: artifacts/monitoring/inference_logs.jsonl
+
+training:
+  image_height: 48
+  image_width: 48
+  channels: 3
+  batch_size: 32
+  epochs: 10
+  validation_split: 0.2
+  learning_rate: 0.001
+  augmentation:
+    rotation_range: 20
+    width_shift_range: 0.2
+    height_shift_range: 0.2
+    shear_range: 0.2
+    zoom_range: 0.2
+    horizontal_flip: true
+    fill_mode: nearest
+
+callbacks:
+  early_stopping_patience: 3
+  reduce_lr_patience: 2
+  reduce_lr_factor: 0.5
+  min_lr: 0.000001
+
+evaluation:
+  threshold: 0.5
+
+inference:
+  default_threshold: 0.5
+
+simulation:
+  frame_stride: 5
+  max_frames: 300
+
+realtime:
+  default_threshold: 0.5
+  frame_stride: 1
+  alert_consecutive_frames: 3
+  show_display: true
+  emit_terminal_bell: false
+  summary_output_dir: artifacts/monitoring
+  max_frames: null
