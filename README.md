@@ -14,6 +14,7 @@ Active implementation now includes:
 - API endpoint (`src/api.py`)
 - Monitoring/business KPI helpers (`src/monitoring.py`, `src/business_metrics.py`)
 - Real-time simulation benchmark (`src/simulate_realtime.py`)
+- Local real-time webcam runtime (`src/realtime_webcam.py`)
 
 > `_Backup_CV/` is intentionally out of active scope.
 
@@ -37,6 +38,7 @@ Active implementation now includes:
 │   ├── infer.py
 │   ├── modeling.py
 │   ├── monitoring.py
+│   ├── realtime_webcam.py
 │   ├── simulate_realtime.py
 │   ├── smoke.py
 │   ├── tracking.py
@@ -76,6 +78,18 @@ Start API:
 
 ```bash
 uvicorn src.api:app --host 0.0.0.0 --port 8000
+```
+
+Run local real-time webcam detection (recommended for latency-sensitive production usage):
+
+```bash
+python3 -m src.realtime_webcam --source 0 --display
+```
+
+Health-check local real-time dependencies (model + capture source):
+
+```bash
+python3 -m src.realtime_webcam --source 0 --health-check
 ```
 
 Run synthetic smoke test:
