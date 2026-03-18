@@ -53,6 +53,7 @@ Core paths:
   - `src/evaluate.py`
   - `src/infer.py`
   - `src/api.py`
+  - `src/realtime_webcam.py`
   - `src/monitoring.py`
   - `src/business_metrics.py`
   - `src/simulate_realtime.py`
@@ -207,6 +208,39 @@ Each API prediction is logged to:
 artifacts/monitoring/inference_logs.jsonl
 ```
 
+### 8.4 Local real-time webcam detection (local-first runtime)
+
+For latency-sensitive production-like usage, run detection locally instead of routing every frame through API:
+
+```bash
+python3 -m src.realtime_webcam \
+  --model-path artifacts/models/v1_baseline/model_best.keras \
+  --source 0 \
+  --display
+```
+
+Headless mode (no OpenCV window):
+
+```bash
+python3 -m src.realtime_webcam \
+  --model-path artifacts/models/v1_baseline/model_best.keras \
+  --source 0 \
+  --no-display \
+  --max-frames 300
+```
+
+Quick readiness check (model + source):
+
+```bash
+python3 -m src.realtime_webcam --source 0 --health-check
+```
+
+Session summary is written to:
+
+```text
+artifacts/monitoring/realtime_session_<timestamp>.json
+```
+
 ---
 
 ## 9) Monitoring summary generation
@@ -253,6 +287,9 @@ Outputs:
 ---
 
 ## 11) Production simulation (real-time benchmark)
+
+> `src/simulate_realtime.py` is intended for benchmark simulation and metrics capture.  
+> Use `src/realtime_webcam.py` for production-style local real-time operation.
 
 ### 11.1 Webcam mode
 
@@ -436,4 +473,3 @@ python3 -m src.infer --model-path artifacts/models/v1_baseline/model_best.keras 
 ```
 
 This validates the full skeleton quickly before deeper training runs.
-

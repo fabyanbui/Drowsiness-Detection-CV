@@ -43,3 +43,12 @@ inference:
 simulation:
   frame_stride: 5
   max_frames: 300
+
+realtime:
+  default_threshold: 0.5
+  frame_stride: 1
+  alert_consecutive_frames: 3
+  show_display: true
+  emit_terminal_bell: false
+  summary_output_dir: artifacts/monitoring
+  max_frames: null
